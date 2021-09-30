@@ -15,7 +15,8 @@ jobs:
         with:
           python-version: 3.x
       - run: pip install -r doccer_requirements.txt
-      - run: python doccer.py main.py docs mkdocs.yml
+      - run: |
+          python ./doccer.py main.py docs mkdocs.yml
       - run: pip install mkdocs-material
       - run: pip install mkdocstrings
       - run: pip install pytkdocs[numpy-style]
